@@ -4,7 +4,6 @@ on:
   pull_request_review
 jobs:
   prLabeler:
-    if: github.base_ref == 'master'
     runs-on: ubuntu-latest
     steps:
     - name: Labeling
