@@ -18,5 +18,3 @@ jobs:
         echo "head_ref: "${{ github.head_ref }}
         echo "ref: "${{ github.ref }}
         echo "event_name: "${{ github.event_name }}
-        echo "GITHUB_BASE_REF: "${{ GITHUB_BASE_REF }}
-        echo "GITHUB_ACTION: "${{ GITHUB_ACTION }}
