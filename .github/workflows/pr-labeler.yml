@@ -11,6 +11,6 @@ jobs:
     - name: Labeling
       uses: fan-y-sasaki/label-when-approved-action@master
       env:
-        APPROVALS: "2"
+        APPROVALS: "1"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         ADD_LABEL: "releasable"
