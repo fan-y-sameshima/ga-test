@@ -1,0 +1,16 @@
+name: Label when approved or remove label when dismissed
+
+on:
+  pull_request_review:
+    types: [submitted]
+jobs:
+  prLabeler:
+    if: github.base_ref == 'master'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Labeling
+      uses: fan-y-sasaki/label-when-approved-action@master
+      env:
+        APPROVALS: "2"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ADD_LABEL: "releasable"
