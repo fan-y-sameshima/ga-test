@@ -1,4 +1,4 @@
- name: Label when approved or remove label when dismissed
+name: Label when approved or remove label when dismissed
 
 on:
   pull_request_review
