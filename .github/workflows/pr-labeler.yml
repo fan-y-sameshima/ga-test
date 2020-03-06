@@ -1,4 +1,4 @@
-name: Label when approved or remove label when dismissed
+ name: Label when approved or remove label when dismissed
 
 on:
   pull_request_review
@@ -12,3 +12,9 @@ jobs:
         APPROVALS: "1"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         ADD_LABEL: "releasable"
+    - name: Echo 
+      run: |
+        echo "base_ref: "${{ github.base_ref }}
+        echo "head_ref: "${{ github.head_ref }}
+        echo "ref: "${{ github.ref }}
+        echo "event_name: "${{ github.event_name }}
